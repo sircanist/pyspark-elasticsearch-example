@@ -1,0 +1,28 @@
+{
+   "schema_input":
+   {
+        "log_name":"Security",
+        "`@timestamp`":"2020-05-03T09:55:43.094Z",
+        "user_name": "test_user",
+        "ReturnCode": 0,
+        "event":{
+            "action":"User Account Management",
+            "kind":"event",
+            "provider":"Microsoft-Windows-Security-Auditing",
+            "code":5382
+        },
+        "host_name":"win-39595e9.aptlab.local"
+   },
+  "group_by": [
+    "user_name",
+    "host_name"
+  ],
+  "watermark": "10 second",
+  "time_window": " 1 minute",
+  "kafka_topic": "winevent-security",
+  "weektime_format": "u:HH",
+  "process_cum_trust_value": 3,
+  "process_cum_alpha": 0.25,
+  "model_identifier": "MODEL_1",
+  "redis_host": "helk-redis"
+}

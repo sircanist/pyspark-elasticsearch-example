@@ -1,0 +1,5 @@
+{
+  "kafka_server": "192.168.122.3:9092",
+  "es_server": "helk-elasticsearch",
+  "spark_master": "192.168.122.3:7077"
+}
